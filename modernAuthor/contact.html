@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{{template "header"}}
+
+<body onload="setMenu()">
+    {{template "navbar"}}
+    <div class="ui container">        
+        <h2 class="ui center aligned header">Contact</h2>      
+        <div class="ui segment">  
+        <form class="ui form"  method="post" action="/contact/send">   
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email" name="fromEmail" placeholder="yourMail@gmail.com" required>
+            </div>  
+            <br>             
+            <div class="field">
+                <label>Message</label>
+                <textarea name="text" rows="3" placeholder="Your message" required></textarea>
+            </div>  
+            <br>      
+            <div class="recaptcha">
+                <div class="g-recaptcha" data-sitekey="{{.CaptchaDataSitekey}}"></div>
+            </div>
+            <div class="form-submit">
+                <button class="ui primary button" type="submit">Submit</button>
+            </div>
+            <br>
+        </form>
+        </div>
+    </div>
+    <br>   
+</body>
+{{template "footer"}}
+
+</html>

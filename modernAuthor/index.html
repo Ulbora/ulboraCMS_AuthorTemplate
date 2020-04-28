@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+{{template "header" .}}
+
+<body onload="setMenu()">
+    {{template "navbar" .}}
+    <div class="ui container">
+        {{if eq .Cont.Name "home"}}
+        <h2 class="ui  header">
+            <img src="/templates/modernAuthor/images/author.png" class="ui circular image">
+            {{.Cont.Title}}
+            <div class="sub header">{{.Cont.TextHTML}}</div>
+        </h2>
+
+        <div class="ui divider"></div>
+
+        {{range .ContListByName}}
+        {{if eq .Name "main1"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/modernAuthor/images/go.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{range .ContListByName}}
+        {{if eq .Name "main2"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/ulboramodern/images/docker.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{range .ContListByName}}
+        {{if eq .Name "main3"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/ulboramodern/images/Kubernetes.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{end}}
+        <!-- End Home Page -->
+
+
+
+        <!-- Start Books Page -->
+        {{if eq .Cont.Name "books"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Cont.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/ulboramodern/images/go2.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Cont.Subject}}</h4>
+                            <p>
+                                {{.Cont.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui divider"></div>
+
+        {{range .ContListByName}}
+        {{if eq .Name "book1"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/ulboramodern/images/mobile.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{range .ContListByName}}
+        {{if eq .Name "book2"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/ulboramodern/images/go3.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{range .ContListByName}}
+        {{if eq .Name "book3"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Title}}
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/ulboramodern/images/Kubernetes.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.TextHTML}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+
+        {{end}}
+        <!-- End Books Page -->
+
+
+
+
+        <!-- Start Interests Page -->
+        {{if eq .Cont.Name "interests"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    {{.Cont.Title}}
+                </h1>
+                <a href="/view/interests">
+                    <img class="ui small centered image" src="./templates/modernAuthor/images/author.png">
+                </a>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Cont.Subject}}</h4>
+                            <!-- <p>
+                                {{.Cont.TextHTML}}
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui divider"></div>
+
+        {{range .ContListByName}}
+        {{if eq .Name "int1"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">                
+                <a class="header" href="/view/int1">
+                    <h1>
+                        {{.Title}}
+                    </h1>
+                </a>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <!-- <p>
+                                {{.TextHTML}}
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{range .ContListByName}}
+        {{if eq .Name "int2"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <a class="header" href="/view/int2">
+                    <h1>
+                        {{.Title}}
+                    </h1>
+                </a>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <!-- <p>
+                                {{.TextHTML}}
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{range .ContListByName}}
+        {{if eq .Name "int3"}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <a class="header" href="/view/int2">
+                    <h1>
+                        {{.Title}}
+                    </h1>
+                </a>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <!-- <p>
+                                {{.TextHTML}}
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+
+        {{end}}
+        <!-- End Interests Page -->
+    </div>
+</body>
+{{template "footer"}}
+
+</html>

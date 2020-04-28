@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{{template "header" .}}
+
+<body onload="setMenu()">
+    {{template "navbar" .}}
+    <div class="ui container">        
+        <h2 class="ui  header">
+            <img src="/templates/modernAuthor/images/author.png" class="ui circular image">
+            Blog Posts
+            <div class="sub header"></div>
+        </h2>
+
+        <div class="ui divider"></div>
+
+        <!-- Start Blog Page -->
+
+        {{range .ContListByDate}}
+        {{if and (.BlogPost) (not .Archived)}}
+        <div class="ui center aligned text container">
+            <div class="ui very padded basic segment">
+                <h1>
+                    <a href="/view/{{.Name}}">{{.Title}}</a>
+                </h1>
+                <!-- <img class="ui small centered image" src="./templates/modernAuthor/images/go.png"> -->
+                <div class="ui items">
+                    <div class="item">
+                        <div class="content">
+                            <h4>{{.Subject}}</h4>
+                            <p>
+                                {{.CreateDate.Format "Jan 2, 2006"}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        {{end}}
+        {{end}}
+        
+    </div>
+</body>
+{{template "footer"}}
+
+</html>

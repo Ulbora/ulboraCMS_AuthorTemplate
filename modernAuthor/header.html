@@ -1,0 +1,32 @@
+{{define "header"}}
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114342126-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114342126-1');
+    </script> -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{.MetaDesc}}" />
+    <meta name="keywords" content="{{.MetaKeyWords}}">
+    <meta name="author" content="{{.MetaAuthor}}" />
+    <title>{{.Title}}</title>
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <link rel="stylesheet" href="/templates/modernAuthor/css/semantic.css">
+
+    <script type='text/javascript' src="/templates/modernAuthor/js/jquery-3.2.1.min.js"></script>
+    <script type='text/javascript' src="/templates/modernAuthor/js/semantic.min.js"></script>
+    <script type='text/javascript' src="/templates/modernAuthor/js/custom.js"></script>
+    <link href="/templates/modernAuthor/css/styles.css" rel="stylesheet" />
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+{{end}}

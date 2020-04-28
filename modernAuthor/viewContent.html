@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{{template "header" .}}
+
+<body onload="setMenu()">
+    {{template "navbar"}}
+    <div class="ui center aligned text container">
+      <div class="ui very padded basic segment">
+          <h1>
+              {{.Cont.Title}}
+          </h1>
+          <!-- <img class="ui small centered image" src="{{.Cont.Subject}}"> -->
+          <div class="ui items">
+              <div class="item">
+                  <div class="content">                      
+                      <p>
+                          {{.Cont.TextHTML}}
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</body>
+{{template "footer"}}
+
+</html>
